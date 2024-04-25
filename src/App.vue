@@ -4,19 +4,19 @@
       <SideBar />
     </div>
     <div class="column is-three-quarter">
-        <Form />
+        <TaskForm />
     </div>
   </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Form from './components/Form.vue';
 import SideBar from './components/SideBar.vue';
+import TaskForm from './components/TaskForm.vue';
 
 export default defineComponent({
   name: 'App',
-  components: { SideBar, Form }
+  components: { SideBar, TaskForm }
 });
 </script>
 
