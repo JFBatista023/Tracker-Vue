@@ -27,9 +27,11 @@ export default defineComponent({
     },
     methods: {
         stopTask(elapsedTime: number): void {
-            console.log(elapsedTime)
-            console.log(this.description)
-            this.description = ''
+            this.$emit('onStopTask', {
+                seconds: elapsedTime,
+                description: this.description
+            });
+            this.description = '';
         }
     }
 })
